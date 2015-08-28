@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.rickey.playground.bmi591</groupId>
+    <artifactId>FHIR</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.jvnet.jaxb2.maven2</groupId>
+            <artifactId>maven-jaxb2-plugin</artifactId>
+            <version>0.12.3</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+                <configuration>
+                    <extension>true</extension>
+                    <schemas>
+                        <schema>
+                            <url>https:/www.hl7.org/implement/standards/fhir/fhir-base.xsd</url>
+                        </schema>
+                    </schemas>
+                    <bindingDirectory>src/main/resources/bindings</bindingDirectory>
+                    <args>
+                        <arg>XtoString</arg>
+                    </args>
+                </configuration>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.jvnet.jaxb2.commons</groupId>
+            <artifactId>jaxb2-basics</artifactId>
+            <version>0.6.5</version>
+        </plugin>
+    </plugins>
+</build>
+    <dependencies>
+        <dependency>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>jaxb2-basics</artifactId>
+            <version>0.6.5</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
+</project>
+
+
+
+package org.rickey.playground.FHIR;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import org.hl7.fhir.model.*;
+import org.hl7.fhir.model.Boolean;
+import org.hl7.fhir.model.Code;
+import org.hl7.fhir.model.CodeableConcept;
+import org.hl7.fhir.model.Coding;
+import org.hl7.fhir.model.DateTime;
+import org.hl7.fhir.model.Identifier;
+import org.hl7.fhir.model.Integer;
+import org.hl7.fhir.model.Organization;
+import org.hl7.fhir.model.Patient;
+import org.hl7.fhir.model.Practitioner;
+import org.hl7.fhir.model.ResourceReference;
+import org.hl7.fhir.model.String;
+import org.hl7.fhir.model.*;
+import sun.org.mozilla.javascript.internal.json.JsonParser;
+import java.text.ParseException;
+
+
+/**
+ * Created by mhchowd1 on 8/24/2015.
+ */
+public class test {
+
+    @Test
+    public void patienttester()throws ParseException {
+
+        //test patient
+        Patient tester = new Patient();
+        tester.setName("Rickey");
+        tester.setDeceasedBoolean(false);
+        tester.setMaritalStatus(0);
+        tester.setGender(0);
+        tester.setMultipleBirth(0);
+
+        assertEquals(tester.getName(),"Rickey");
+        assertEquals(tester.getDeceased(),false);
+        assertEquals(tester.getMaritalStatus(),0);
+        assertEquals(tester.getGender(),0);
+        assertEquals(tester.getMultipleBirth(),0);
+
+
+
+
+
+
+    }
+}
