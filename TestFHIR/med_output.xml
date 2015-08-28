@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Medication xmlns="http://hl7.org/fhir" xmlns:ns2="http://www.w3.org/1999/xhtml"><code><coding><code value="420420"/><display value="Paracetamol"/></coding></code><isBrand value="false"/><kind value="product"/></Medication>

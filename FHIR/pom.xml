@@ -46,7 +46,7 @@
                 <extension>true</extension>
                 <schemas>
                     <schema>
-                        <url>src/main/resources/fhir-all-xsd/fhir-base.xsd</url>
+                        <url>file:/C:/Users/Mhchowd1/IdeaProjects/NewBeginning/FHIR/src/main/resources/fhir-all-xsd/fhir-base.xsd</url>
                     </schema>
                 </schemas>
                 <bindingDirectory>src/main/resources/bindings</bindingDirectory>
