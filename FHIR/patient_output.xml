@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Patient xmlns="http://hl7.org/fhir"
+         xmlns:ns2="http://www.w3.org/1999/xhtml">
+    <gender>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/AdministrativeGender"/>
+            <code value="M"/>
+            <display value="Male"/>
+            </coding>
+    </gender>
+<active value="true"/>
+    </Patient>
