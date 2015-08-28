@@ -118,7 +118,6 @@ org\hl7\fhir\model\DeviceObservationReportChannel.class
 org\hl7\fhir\model\QuestionnaireQuestion.class
 org\hl7\fhir\model\ContactSystemList.class
 org\hl7\fhir\model\CriticalityList.class
-org\rickey\playground\FHIR\App.class
 org\w3\_1999\xhtml\Area.class
 org\hl7\fhir\model\DeviceObservationReportVirtualDevice.class
 org\hl7\fhir\model\ProfileStructure.class
